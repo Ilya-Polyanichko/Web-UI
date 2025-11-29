@@ -1,0 +1,95 @@
+/* Блок таймлайна */
+.timeline {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Контейнер для прокрутки */
+.timeline-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; /* Важно: не переносить содержимое */
+}
+
+/* Прокручиваемая область */
+.timeline-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: auto;
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.grid-date {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+    white-space: nowrap;
+    z-index: 3;
+    left: 0;
+    transform: none;
+}
+
+.grid-line {
+    position: absolute;
+    top: 20px;
+    width: 1px;
+    height: 10px;
+    border-left: 1px dashed #ccc;
+    z-index: 1;
+}
+
+.timeline-activities {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    min-height: 100px;
+}
+
+.timeline-activity {
+    width: 100%;
+    min-height: 30px;
+    position: absolute;
+}
+
+.timeline-line {
+    position: relative;
+    height: 30px;
+}
+
+.timeline-bar {
+    position: absolute;
+    background-color: #d4ccfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #333;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 2px;
+    z-index: 10;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
